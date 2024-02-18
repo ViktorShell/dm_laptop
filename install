@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Check Yay
+if [ -z "$(which yay)" ]; then
+  echo "--> AUR yay non installato"
+  exit
+fi
+
+# System update
+sudo pacman -Syu
+sudo pacman -S xorg-xinit \
+  pulseaudio \
+  i3-wm \
+  rofi \
+  feh \
+  dunst \
+  picom \
+  python-i3ipc \
+  python-psutil \
+  brightnessctl \
+  ttf-jetbrains-mono-nerd \
+  ttf-iosevka-nerd \
+  flameshot
+
+# Aur
+yay -S lemonbar-xft-git
+
+# Install
+CONF=$HOME/.config
+mkdir copy
+
+if [ -d $CONF/i3 ]; then
+  mv $CONF/i3 copy/i3
+fi
+
+if [ -d $CONF/dunst ]; then
+  mv $CONF/dunst copy/dunst
+fi
+
+if [ -d $CONF/picom ]; then
+  mv $CONF/picom copy/picom
+fi
+
+if [ -e $HOME/.xinitrc ]; then
+  mv $HOME/.xinitrc copy/xinitrc
+fi
+
+cp -r i3 $CONF
+cp -r dunst $CONF
+cp -r picom $CONF
+cp xinitrc $HOME/.xinitrc
+
+echo "--> Completed"

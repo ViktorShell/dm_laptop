@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIR=$HOME/.config/i3
+
+setxkbmap it
+feh --bg-scale $DIR/wallpaper/ocean.jpg
+bash $DIR/lemonbar/launch
