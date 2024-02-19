@@ -20,6 +20,7 @@ sudo pacman -S xorg-xinit \
   brightnessctl \
   ttf-jetbrains-mono-nerd \
   ttf-iosevka-nerd \
+  lxsession-gtk3 \
   flameshot
 
 # Aur

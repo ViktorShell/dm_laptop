@@ -4,5 +4,6 @@ DIR=$HOME/.config/i3
 
 setxkbmap it
 feh --bg-scale $DIR/wallpaper/ocean.jpg
+lxpolkit &
 picom &
 bash $DIR/lemonbar/launch
