@@ -4,5 +4,5 @@ DIR="$HOME/.config/i3/lemonbar/"
 python $DIR/lemonbar.py | lemonbar -p \
 -g 1920x24+0+0 \
 -B "#151515" -F "#e8e8d3" \
--f "JetBrainsMono Nerd Font:bold:size=14"
+-f "JetBrainsMono Nerd Font:bold:size=14" \
 -f "Iosevka Nerd Font:bold:size=14"
