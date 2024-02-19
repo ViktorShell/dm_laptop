@@ -21,6 +21,7 @@ sudo pacman -S xorg-xinit \
   ttf-jetbrains-mono-nerd \
   ttf-iosevka-nerd \
   lxsession-gtk3 \
+  i3lock \
   flameshot
 
 # Aur
